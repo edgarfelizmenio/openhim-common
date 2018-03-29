@@ -2,7 +2,7 @@
   "version": "1.10.0",
   "minimumCoreVersion": "3.4.0",
   "protocol": "https",
-  "host": "0.0.0.0",
+  "host": "10.147.72.11",
   "port": 8080,
   "title": "TL1 Admin Console",
   "footerTitle": "TL1 OpenHIM Administration Console",
