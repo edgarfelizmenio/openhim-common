@@ -81,25 +81,29 @@ ta_channels = [{
     'name': 'Get Master Key',
     'urlPattern': '^/masterkey$',
     'allow': ['tut'],
-    'methods': ['GET'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['TA']]
 },{
     'name': 'Get or Update User',
     'urlPattern': '^/user/.*(?<!/sk)$',
     'allow': ['tut'],
-    'methods': ['GET', 'PUT'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['TA']]
 },{
     'name': 'Add User',
     'urlPattern': '^/user$',
     'allow': ['tut'],
-    'methods': ['POST'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['TA']]
 },{
     'name': 'Get One Time Key of User',
     'urlPattern': '^/user/.*(?<=/sk)$',
     'allow': ['tut'],
-    'methods': ['GET'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['TA']]
 }]
 
@@ -107,25 +111,29 @@ cr_channels = [{
     'name': 'Get Person IDs',
     'urlPattern': '^/person$',
     'allow': ['tut'],
-    'methods': ['GET'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['CR']]
 },{
     'name': 'Get Person',
     'urlPattern': '^/person/.*$',
     'allow': ['tut'],
-    'methods': ['GET'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['CR']]
 },{
     'name': 'Add Patient or Get All Patients',
     'urlPattern': '^/patient$',
     'allow': ['tut'],
-    'methods': ['GET', 'POST'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['CR']]
 },{
     'name': 'Add, Get, or Delete Patient',
     'urlPattern': '^/patient/.*$',
     'allow': ['tut'],
-    'methods': ['GET', 'PUT', 'DELETE'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['CR']]
 }]
 
@@ -133,13 +141,15 @@ fr_channels = [{
     'name': 'Get Location by ID',
     'urlPattern': '^/location/.*$',
     'allow': ['tut'],
-    'methods': ['GET'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['FR']]
 },{
     'name': 'Get all locations',
     'urlPattern': '^/location$',
     'allow': ['tut'],
-    'methods': ['GET'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['FR']]
 }]
 
@@ -147,13 +157,15 @@ hwr_channels = [{
     'name': 'Get Provider by ID',
     'urlPattern': '^/provider/.*$',
     'allow': ['tut'],
-    'methods': ['GET'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['HWR']]
 },{
     'name': 'Get all provider IDs',
     'urlPattern': '^/provider$',
     'allow': ['tut'],
-    'methods': ['GET'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['HWR']]
 }]
 
@@ -161,19 +173,22 @@ shr_channels = [{
     'name': 'Get or Add Encounters based on patient ID',
     'urlPattern': '^/encounters/patient/.*$',
     'allow': ['tut'],
-    'methods': ['GET', 'POST'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['SHR']]
 },{
     'name': 'Return an Encounter based on encounter ID',
     'urlPattern': '^/encounters/.*',
     'allow': ['tut'],
-    'methods': ['GET'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['SHR']]
 },{
     'name': 'Add an Encounter or Get all Encounter ids',
     'urlPattern': '^/encounters$',
     'allow': ['tut'],
-    'methods': ['GET', 'POST'],
+    "authType": "public",
+    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
     'routes': [default_routes['SHR']]
 }]
 
