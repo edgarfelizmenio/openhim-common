@@ -21,13 +21,23 @@ for txn in txn_list:
         transaction_sizes_bins[path].append(len(bson.BSON.encode(txn)))
 
 num_txns = len(txn_list)
+empty_bins = []
 for k in transaction_sizes_bins.keys():
     bin_size = len(transaction_sizes_bins[k])
     if bin_size == 0:
-        del transaction_sizes_bins[k]
+        empty_bins.append(k)
     else:
         num_txns = min(num_txns, bin_size)
     print(k, bin_size)
+
+print("\nEmpty bins:")
+for e in empty_bins:
+    print(e)
+    del transaction_sizes_bins[e]
+
+print("\nNot empty bins:")
+for b in transaction_sizes_bins.keys():
+    print(b)
 
 txn_sizes = []
 for i in range(num_txns):
