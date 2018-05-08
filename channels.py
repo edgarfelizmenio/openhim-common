@@ -181,14 +181,14 @@ shr_channels = [{
     'urlPattern': '^/encounters/.*',
     'allow': ['tut'],
     "authType": "public",
-    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
+    "methods": ["GET"],
     'routes': [default_routes['SHR']]
 },{
     'name': 'Add an Encounter or Get all Encounter ids',
     'urlPattern': '^/encounters$',
     'allow': ['tut'],
     "authType": "public",
-    "methods": ["GET", "HEAD", "POST", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"],
+    "methods": ["POST"],
     'routes': [default_routes['SHR']]
 }]
 
